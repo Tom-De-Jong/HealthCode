@@ -17,7 +17,6 @@ const Toast = {
     show(message = "Notification", type = "error", duration = 3000) {
         if (!this.container) this.init();
 
-        // Define our theme variations
         const types = {
             success: { bg: '#22c55e', border: '#15803d' },
             error: { bg: '#ef4444', border: '#b91c1c' },
@@ -25,7 +24,7 @@ const Toast = {
             warning: { bg: '#f59e0b', border: '#b45309' }
         };
 
-        // Fallback to error if an invalid type is passed
+
         const theme = types[type] || types.error;
 
         const toast = document.createElement('div');
@@ -71,16 +70,12 @@ fileinput.addEventListener('change', e => {
 
     const imageFile = e.target.files[0];
 
-    // Use scanFileV2 - it's much better for iOS/Mobile orientation
     html5QrCode.scanFileV2(imageFile, true)
         .then(decodedResult => {
-            // FIX: scanFileV2 returns an object { decodedText, result }
-            // If you use just 'decodedResult', it's an object, not the text.
             barcodeNum = decodedResult.decodedText; 
 
             console.log("Scan Success:", barcodeNum);
             
-            // Ensure Toast exists before calling to prevent silent crashes
             if (typeof Toast !== 'undefined') {
                 Toast.show("Code detected: " + barcodeNum, "success", 5000);
             } else {
@@ -88,7 +83,6 @@ fileinput.addEventListener('change', e => {
             }
         })
         .catch(err => {
-            // This catches "No MultiFormat readers"
             console.error("Scanning failed:", err);
             
             if (typeof Toast !== 'undefined') {
