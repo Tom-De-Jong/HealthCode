@@ -52,7 +52,7 @@ body {
 }
 
 .heroSection {
-    height: calc(100vh - 125px);
+    min-height: calc(100vh - 125px);
     display: flex;
     justify-content: center;
 }
@@ -301,4 +301,166 @@ circle-progress::part(text) {
     border-radius: 1000px;
     display: flex;
     align-items: center;
+}
+
+@media only screen and (max-width: 1150px) {
+
+.heroHeader{
+font-size: 50px;
+}
+
+}
+
+@media only screen and (max-width: 1150px) {
+
+.heroSection{
+    min-height: 0px;
+}
+
+.center{
+    flex-direction: column;
+    margin-top: 130px;
+}
+
+.heroSplitDiv{
+    width: 90%;
+    margin-bottom: 0px;
+}
+
+.heroImage{
+    width: auto;
+    height: 100%;
+}
+
+#apple{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 500px;
+}
+
+.imageSection{
+    height: auto;
+}
+
+.mobileLessMarginTop{
+    margin-top: 50px;
+}
+
+.heroSplitDivBarcode{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.startButton{
+    margin-bottom: 50px;
+}
+}
+
+@media only screen and (max-width: 700px) {
+.navButton{
+    display: none;
+}
+
+.navBar{
+    display: flex;
+    flex-direction: column;
+}
+
+.navLogo{
+    margin: 0px;
+}
+
+.navLogoText{
+    margin: 0px;
+}
+
+.heroSection{
+    text-align: center;
+}
+
+.heroHeader{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.heroCTA{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.heroHeader{
+    margin-top: 10px;
+}
+
+.heroImage{
+    width: 100%;
+    height: auto;
+}
+
+#apple{
+    height: auto;
+}
+
+.imageHeader{
+    font-size: 30px;
+}
+
+.fileInputText{
+    font-size: 15px;
+}
+
+.margin{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.summarySplitDiv{
+    width: 100%;
+}
+
+#itemName{
+    margin-bottom: 20px;
+}
+
+.listText{
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.summarySplitDiv2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+circle-progress::part(base) {
+    width: 150px;
+    height: auto;
+}
+
+#AISummary{
+    font-size: 20px;
+}
+
+.listText2{
+    font-size: 20px !important;
+}
+
+#mobile{
+    display: block !important; 
+    font-size: 20px !important;
+}
+
+#desktop{
+    display: none;
+}
 }

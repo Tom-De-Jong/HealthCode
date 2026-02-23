@@ -37,27 +37,28 @@
                 <img class="heroArrow" src="img/Arrow 1.svg" alt="">
             </div>
 
-            <div class="heroSplitDiv">
+            <div class="heroSplitDiv"  id="apple">
                 <img class="heroImage" src="img/HeroImage.png" alt="">
             </div>
         </div>
     </section>
 
     <section class="imageSection" id="imageSection">
-        <div class="center">
-            <div class="heroSplitDiv">
+        <div class="center mobileLessMarginTop">
+            <div class="heroSplitDiv heroSplitDivBarcode">
                 <div class="barcodeIMGHolder" id="reader">
                     <script src="./dist/html5-qrcode.js"></script>
                     <img class="barcodeIMG" src="img/placeholdersquare.png" alt="">
                 </div>
             </div>
 
-            <div class="heroSplitDiv">
+            <div class="heroSplitDiv heroSplitDivBarcode">
                 <h1 class="imageHeader">Upload an image with a <span class="bold">barcode</span> to get started.</h1>
 
                 <div class="input">
-                    <p class="fileInputText">Click or drag here to upload an image</p>
-                    <input class="fileInput" type="file" id="qr-input-file" accept="image/*">
+                    <p id="desktop" class="fileInputText">Click or drag here to upload an image</p>
+                    <p id="mobile" class="fileInputText" style="display: none;">Take picture</p>
+                    <input class="fileInput" type="file" id="qr-input-file" accept="image/*" capture="enviroment">
                 </div>
                 <button onclick="sendToApi()" class="startButton">Start</button>
             </div>

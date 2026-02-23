@@ -63,26 +63,37 @@ const Toast = {
 
 
 let barcodeNum;
-
-const html5QrCode = new Html5Qrcode(/* element id */ "reader");
-// File based scanning
+const html5QrCode = new Html5Qrcode("reader");
 const fileinput = document.getElementById('qr-input-file');
+
 fileinput.addEventListener('change', e => {
-    if (e.target.files.length == 0) {
-        // No file selected, ignore 
-        return;
-    }
+    if (e.target.files.length == 0) return;
 
     const imageFile = e.target.files[0];
-    // Scan QR Code
-    html5QrCode.scanFile(imageFile, true)
-        .then(decodedText => {
-            // success, use decodedText
-            barcodeNum = decodedText;
+
+    // Use scanFileV2 - it's much better for iOS/Mobile orientation
+    html5QrCode.scanFileV2(imageFile, true)
+        .then(decodedResult => {
+            // FIX: scanFileV2 returns an object { decodedText, result }
+            // If you use just 'decodedResult', it's an object, not the text.
+            barcodeNum = decodedResult.decodedText; 
+
+            console.log("Scan Success:", barcodeNum);
+            
+            // Ensure Toast exists before calling to prevent silent crashes
+            if (typeof Toast !== 'undefined') {
+                Toast.show("Code detected: " + barcodeNum, "success", 5000);
+            } else {
+                alert("Code: " + barcodeNum);
+            }
         })
         .catch(err => {
-            // failure, handle it.
-            console.log(`Error scanning file. Reason: ${err}`)
+            // This catches "No MultiFormat readers"
+            console.error("Scanning failed:", err);
+            
+            if (typeof Toast !== 'undefined') {
+                Toast.show("Could not read barcode. Try again.", "error", 5000);
+            }
         });
 });
 
