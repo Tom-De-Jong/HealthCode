@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HealthCode</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <nav class="navBar">
+        <img class="navLogo" src="img/HealthCodeLogoBrownCropped.png" alt="">
+        <p class="navLogoText">HealthCode</p>
+        <button class="navButton"><a href="#imageSection">Get started</a></button>
+    </nav>
+
+    <section class="heroSection">
+        <div class="center">
+            <div class="heroSplitDiv">
+                <p class="bubbledText">scan, score, eat safe</p>
+                <h1 class="heroHeader">Decode <span class="bold">your</span> diet with healthcode</h1>
+                <p class="heroCTA">Learn how healthcode can help you live <span class="bold">healthier</span> and <span
+                        class="bold">easier</span></p>
+                <img class="heroArrow" src="img/Arrow 1.svg" alt="">
+            </div>
+
+            <div class="heroSplitDiv">
+                <img class="heroImage" src="img/HeroImage.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="imageSection" id="imageSection">
+        <div class="center">
+            <div class="heroSplitDiv">
+                <div class="barcodeIMGHolder" id="reader">
+                    <script src="./dist/html5-qrcode.js"></script>
+                    <img class="barcodeIMG" src="img/placeholdersquare.png" alt="">
+                </div>
+            </div>
+
+            <div class="heroSplitDiv">
+                <h1 class="imageHeader">Upload an image with a <span class="bold">barcode</span> to get started.</h1>
+
+                <div class="input">
+                    <p class="fileInputText">Click here to upload an image</p>
+                    <input class="fileInput" type="file" id="qr-input-file" accept="image/*">
+                </div>
+                <input id="hcApiKey" class="input" type="text" placeholder="Hackclub ai api key">
+                <button class="startButton">Start</button>
+            </div>
+        </div>
+    </section>
+
 </body>
+<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+<script src="app.js" defer></script>
+
 </html>

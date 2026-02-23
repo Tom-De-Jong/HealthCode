@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F3F0DB;
+    font-family: "Geist", sans-serif;
+}
+
+.navBar {
+    height: 125px;
+    display: flex;
+    align-items: center;
+}
+
+.navLogo {
+    height: 60%;
+    margin-left: 5%;
+}
+
+.navLogoText {
+    font-family: "Lato", sans-serif;
+    color: #3A1313;
+    font-size: 40px;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.navButton {
+    height: 50%;
+    width: 250px;
+    background-color: #3A1313;
+    border-radius: 100px;
+    color: white;
+    border: none;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: "Geist", sans-serif;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.heroSection {
+    height: calc(100vh - 125px);
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.bubbledText {
+    display: inline-block;
+    border: 2px solid #3A1313;
+    border-radius: 100px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #3A1313;
+    font-size: 20px;
+}
+
+.heroHeader {
+    font-size: 85px;
+    font-weight: normal;
+    color: #3A1313;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.heroCTA {
+    font-size: 32px;
+    color: #3A1313;
+
+}
+
+.heroSplitDiv {
+    width: 50%;
+    margin-bottom: 125px;
+}
+
+.heroImage {
+    width: 100%;
+}
+
+.imageSection {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.barcodeIMGHolder {
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    border: #3A1313 3px solid;
+    border-radius: 40px;
+}
+
+.barcodeIMG{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+}
+
+.imageHeader{
+    font-weight: normal;
+    font-size: 70px;
+    color: #3A1313;
+    margin-bottom: 50px;
+}
+
+.input{
+width: 80%;
+height: 70px;
+border-radius: 1000px;
+border: 3px solid #3A1313;
+background-color: #ffffff00;
+margin-bottom: 25px;
+font-size: 25px;
+text-align: left;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: #3A1313;
+font-weight: 500;
+position: relative;
+overflow: hidden;
+}
+
+.fileInputText{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.fileInput{
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    opacity: 0;        
+    cursor: pointer;   
+    z-index: 10;      
+}
+
+.input:focus{
+outline: none;
+}
+
+.startButton{
+width: 80%;
+height: 70px;
+border-radius: 1000px;
+background-color: #3A1313;
+color: white;
+outline: none;
+border: none;
+font-size: 25px;
+}
