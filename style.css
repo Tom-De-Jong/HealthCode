@@ -179,3 +179,71 @@ outline: none;
 border: none;
 font-size: 25px;
 }
+
+.summarySection{
+    display: flex;
+    justify-content: center;
+}
+
+.summaryContent{
+width: 90%;
+}
+
+.itemsummary{
+    width: 100%;
+    border: #3A1313 3px solid;
+    border-radius: 25px;
+    margin-bottom: 40px;
+}
+
+.margin{
+    margin: 40px;
+    display: flex;
+}
+
+.listText{
+    color: #3A1313;
+    font-size: 25px;
+    width: 70%;
+}
+
+.listText2{
+    color: #3A1313;
+    font-size: 25px;
+}
+
+
+.summarySplitDiv{
+    width: 50%;
+}
+
+.summarySplitDiv2{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+circle-progress::part(base){
+    width: 300px;
+    height: auto;
+}
+circle-progress::part(value) {
+	stroke-width: 6px;
+	stroke: hsl(39, 100%, 50%);
+}
+circle-progress::part(circle) {
+	stroke-width: 6px;
+	stroke: hsl(39, 100%, 85%);
+}
+circle-progress::part(text) {
+	fill: hsl(39, 100%, 50%);
+}
+
+.Ingredients{
+    margin-top: 15px;
+    height: 80px;
+    width: 100%;
+    border: #3A1313 3px solid;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+}

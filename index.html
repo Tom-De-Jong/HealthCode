@@ -60,12 +60,69 @@
                     <input class="fileInput" type="file" id="qr-input-file" accept="image/*">
                 </div>
                 <input id="hcApiKey" class="input" type="text" placeholder="Hackclub ai api key">
-                <button class="startButton">Start</button>
+                <button onclick="sendToApi()" class="startButton">Start</button>
             </div>
         </div>
     </section>
 
+    <section class="summarySection">
+        <div class="summaryContent">
+
+            <p class="bubbledText" style="margin-bottom: 20px;">Summary</p>
+            <div class="itemsummary">
+                <div class="margin" style="margin-bottom: 80px;">
+                    <div class="summarySplitDiv">
+
+
+                        <h2 class="heroHeader">Item name</h2>
+                        <p class="listText"><span class="bold">Ingredients:</span> <br>
+                            Water, carbonated water, color E150d, acid phosphoric acid, sweeteners (sodium cyclamate,
+                            acesulfame K, aspartame, enzymatically produced steviol glycosides), natural flavoring,
+                            caffeine flavoring, acidity regulator sodium citrates. Contains a source of phenylalanine.
+                        </p>
+                    </div>
+                    <div class="summarySplitDiv2">
+                        <circle-progress value="50" max="100"></circle-progress>
+                    </div>
+                </div>
+
+                <div class="margin">
+
+                    <p class="listText2"><span class="bold">AI Summary:</span>
+                        If you are using this to replace a high-sugar soda, it is a "healthier" choice in the context of
+                        calorie reduction. However, it provides no vitamins, minerals, or nutrients. It is an
+                        ultra-processed beverage that is fine in moderation but shouldn't replace water as your primary
+                        source of hydration.
+                        Would you like me to explain the specific side effects of any one of these sweeteners?</p>
+
+                </div>
+            </div>
+
+
+            <div class="Ingredients">
+                <p class="listText2" style="font-size: 40px; margin-left: 25px;">Name</p>
+                <p class="listText2" style="margin-left: auto; margin-right: 25px; font-size: 40px;">64%</p>
+            </div>
+
+                        <div class="Ingredients">
+                <p class="listText2" style="font-size: 40px; margin-left: 25px;">Name</p>
+                <p class="listText2" style="margin-left: auto; margin-right: 25px; font-size: 40px;">64%</p>
+            </div>
+                        <div class="Ingredients">
+                <p class="listText2" style="font-size: 40px; margin-left: 25px;">Name</p>
+                <p class="listText2" style="margin-left: auto; margin-right: 25px; font-size: 40px;">64%</p>
+            </div>
+                        <div class="Ingredients">
+                <p class="listText2" style="font-size: 40px; margin-left: 25px;">Name</p>
+                <p class="listText2" style="margin-left: auto; margin-right: 25px; font-size: 40px;">64%</p>
+            </div>
+            
+
+        </div>
+    </section>
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/js-circle-progress/dist/circle-progress.min.js" type="module" defer></script>
 <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 <script src="app.js" defer></script>
 
