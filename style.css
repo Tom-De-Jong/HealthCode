@@ -463,4 +463,15 @@ circle-progress::part(base) {
 #desktop{
     display: none;
 }
+
+.barcodeIMGHolder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    align-self: center;  
+    flex-basis: auto;
+    border: #3A1313 3px solid;
+    border-radius: 40px;
+    overflow: hidden;
+}
 }

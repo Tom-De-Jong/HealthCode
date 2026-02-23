@@ -206,7 +206,7 @@ async function analyzeProduct(name, ingred) {
         summarySection.style.display = "flex";
 
 
-        summarySection.scrollIntoView({ behavior: "smooth", block: "start" });
+        summarySection.scrollIntoView(true);
         Toast.show("Analyzing done!", "success");
 
 

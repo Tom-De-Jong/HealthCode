@@ -46,7 +46,7 @@
     <section class="imageSection" id="imageSection">
         <div class="center mobileLessMarginTop">
             <div class="heroSplitDiv heroSplitDivBarcode">
-                <div class="barcodeIMGHolder" id="reader">
+                <div class="barcodeIMGHolder" id="reader" width="600px" height="600px">
                     <script src="./dist/html5-qrcode.js"></script>
                     <img class="barcodeIMG" src="img/placeholdersquare.png" alt="">
                 </div>
@@ -58,7 +58,7 @@
                 <div class="input">
                     <p id="desktop" class="fileInputText">Click or drag here to upload an image</p>
                     <p id="mobile" class="fileInputText" style="display: none;">Take picture</p>
-                    <input class="fileInput" type="file" id="qr-input-file" accept="image/*" capture="enviroment">
+                    <input class="fileInput" type="file" id="qr-input-file" accept="image/*">
                 </div>
                 <button onclick="sendToApi()" class="startButton">Start</button>
             </div>
