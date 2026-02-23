@@ -56,10 +56,9 @@
                 <h1 class="imageHeader">Upload an image with a <span class="bold">barcode</span> to get started.</h1>
 
                 <div class="input">
-                    <p class="fileInputText">Click here to upload an image</p>
+                    <p class="fileInputText">Click or drag here to upload an image</p>
                     <input class="fileInput" type="file" id="qr-input-file" accept="image/*">
                 </div>
-                <input id="hcApiKey" class="input" type="text" placeholder="Hackclub ai api key">
                 <button onclick="sendToApi()" class="startButton">Start</button>
             </div>
         </div>
@@ -74,21 +73,21 @@
                     <div class="summarySplitDiv">
 
 
-                        <h2 class="heroHeader">Item name</h2>
-                        <p class="listText"><span class="bold">Ingredients:</span> <br>
+                        <h2 class="heroHeader" id="itemName">Item name</h2>
+                        <p class="listText" id="ingredientList"><span class="bold">Ingredients:</span> <br>
                             Water, carbonated water, color E150d, acid phosphoric acid, sweeteners (sodium cyclamate,
                             acesulfame K, aspartame, enzymatically produced steviol glycosides), natural flavoring,
                             caffeine flavoring, acidity regulator sodium citrates. Contains a source of phenylalanine.
                         </p>
                     </div>
                     <div class="summarySplitDiv2">
-                        <circle-progress value="50" max="100"></circle-progress>
+                        <circle-progress id="circleProgress" value="50" max="100"></circle-progress>
                     </div>
                 </div>
 
                 <div class="margin">
 
-                    <p class="listText2"><span class="bold">AI Summary:</span>
+                    <p class="listText2" id="AISummary"><span class="bold">AI Summary:</span>
                         If you are using this to replace a high-sugar soda, it is a "healthier" choice in the context of
                         calorie reduction. However, it provides no vitamins, minerals, or nutrients. It is an
                         ultra-processed beverage that is fine in moderation but shouldn't replace water as your primary
@@ -98,25 +97,15 @@
                 </div>
             </div>
 
+            <!-- this is what the html will look like -->
 
-            <div class="Ingredients">
-                <p class="listText2" style="font-size: 40px; margin-left: 25px;">Name</p>
-                <p class="listText2" style="margin-left: auto; margin-right: 25px; font-size: 40px;">64%</p>
-            </div>
+            <!-- <div class="Ingredients">
+                <p id="ingredientName" class="listText2" style="font-size: 40px; margin-left: 25px;">Name</p>
+                <p id="ingredientPercentage" class="listText2" style="margin-left: auto; margin-right: 25px; font-size: 40px;">64%</p>
+            </div> -->
 
-                        <div class="Ingredients">
-                <p class="listText2" style="font-size: 40px; margin-left: 25px;">Name</p>
-                <p class="listText2" style="margin-left: auto; margin-right: 25px; font-size: 40px;">64%</p>
-            </div>
-                        <div class="Ingredients">
-                <p class="listText2" style="font-size: 40px; margin-left: 25px;">Name</p>
-                <p class="listText2" style="margin-left: auto; margin-right: 25px; font-size: 40px;">64%</p>
-            </div>
-                        <div class="Ingredients">
-                <p class="listText2" style="font-size: 40px; margin-left: 25px;">Name</p>
-                <p class="listText2" style="margin-left: auto; margin-right: 25px; font-size: 40px;">64%</p>
-            </div>
-            
+
+
 
         </div>
     </section>
