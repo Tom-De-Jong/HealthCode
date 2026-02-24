@@ -8,15 +8,16 @@ a {
     color: white;
     text-decoration: none;
     display: contents;
-    text-decoration: none; /* Keeps the text from turning blue/underlined */
+    text-decoration: none;
+    /* Keeps the text from turning blue/underlined */
     color: inherit;
 }
 
-a:hover{
-cursor: pointer;
+a:hover {
+    cursor: pointer;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
@@ -63,13 +64,13 @@ body {
     margin-left: 20px;
 }
 
-.navbut2{
+.navbut2 {
     margin-right: 0px;
     margin-left: auto;
 }
 
-.navbut3{
-        margin-right: 5%;
+.navbut3 {
+    margin-right: 5%;
     margin-left: auto;
 }
 
@@ -197,32 +198,32 @@ body {
     animation-name: itemAnim1;
 }
 
-#anim2{
+#anim2 {
     animation-name: itemAnim2;
 }
 
-#anim3{
+#anim3 {
     animation-name: itemAnim3;
 }
 
-#anim4{
+#anim4 {
     animation-name: itemAnim4;
 }
 
-#anim5{
+#anim5 {
     animation-name: itemAnim5;
 }
 
-#anim6{
+#anim6 {
     animation-name: itemAnim6;
 }
 
-#anim7{
+#anim7 {
     animation-name: itemAnim7;
 }
 
 
-.anim{
+.anim {
     animation-duration: 3s;
     animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
     animation-fill-mode: forwards;
@@ -454,6 +455,7 @@ circle-progress::part(text) {
     align-items: center;
 }
 
+
 @media only screen and (max-width: 1150px) {
 
     .heroHeader {
@@ -529,17 +531,18 @@ circle-progress::part(text) {
 }
 
 @media only screen and (max-width: 1000px) {
-.navbut1{
-    display: none;
+    .navbut1 {
+        display: none;
+    }
+
+    .navbut2 {
+        margin-right: 5%;
+        margin-left: auto;
+    }
+
+
 }
 
-.navbut2{
-    margin-right: 5%;
-    margin-left: auto;
-}
-
-
-}
 @media only screen and (max-width: 958px) {
 
     .polygon {
@@ -702,23 +705,89 @@ circle-progress::part(text) {
     }
 }
 
+.footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+    font-size: 10px;
+    border-top: #3A1313 3px solid;
+}
+
 /* about css is here!! blehh if you read this send me a message: tomdejong2009@gmail.com */
 
 
 
 
-.tomIMG{
+.tomIMG {
     width: 80%;
 }
 
-.aboutsplit{
+.aboutsplit {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#biggertext{
+#biggertext {
     font-size: 30px;
     margin-bottom: 50px;
 }
 
+/* extra animations wow!! this will make the page look so awesome. i bet nobody will even read this */
+
+@keyframes weightanimation {
+    0% {
+        font-weight: 100;
+        letter-spacing: normal;
+    }
+
+    100% {
+        font-weight: 900;
+        letter-spacing: -3px;
+    }
+}
+
+.weightanim {
+    animation: weightanimation;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes arrowAnim {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+         transform: translate(0px, 10px);
+    }
+}
+
+.arrowAnim {
+    animation: arrowAnim;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation-direction: alternate;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+}
+
+.buttondownanim{
+    box-shadow: 0px 10px 0px 0px #3A1313;
+    transition: 0.4s ease;
+}
+
+.buttondownanim:hover{
+transform: translate(0px, 5px);
+box-shadow: 0px 5px 0px 0px #3A1313;
+}
+
+.buttondownanim:active{
+transform: translate(0px, 10px);
+box-shadow: 0px 0px 0px 0px #3A1313;
+}
