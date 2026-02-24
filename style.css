@@ -7,6 +7,17 @@
 a {
     color: white;
     text-decoration: none;
+    display: contents;
+    text-decoration: none; /* Keeps the text from turning blue/underlined */
+    color: inherit;
+}
+
+a:hover{
+cursor: pointer;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 html {
@@ -49,6 +60,17 @@ body {
     font-family: "Geist", sans-serif;
     margin-left: auto;
     margin-right: 5%;
+    margin-left: 20px;
+}
+
+.navbut2{
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+.navbut3{
+        margin-right: 5%;
+    margin-left: auto;
 }
 
 .heroSection {
@@ -506,6 +528,18 @@ circle-progress::part(text) {
     }
 }
 
+@media only screen and (max-width: 1000px) {
+.navbut1{
+    display: none;
+}
+
+.navbut2{
+    margin-right: 5%;
+    margin-left: auto;
+}
+
+
+}
 @media only screen and (max-width: 958px) {
 
     .polygon {
@@ -667,3 +701,24 @@ circle-progress::part(text) {
         display: none;
     }
 }
+
+/* about css is here!! blehh if you read this send me a message: tomdejong2009@gmail.com */
+
+
+
+
+.tomIMG{
+    width: 80%;
+}
+
+.aboutsplit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#biggertext{
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
