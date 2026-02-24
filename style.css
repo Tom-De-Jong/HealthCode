@@ -95,8 +95,137 @@ body {
     margin-bottom: 125px;
 }
 
+#apple {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@keyframes itemAnim1 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-60px, 160px);
+    }
+}
+
+@keyframes itemAnim2 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-130px, 80px);
+    }
+}
+
+@keyframes itemAnim3 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-145px, -30px);
+    }
+}
+
+@keyframes itemAnim4 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-105px, -160px);
+    }
+}
+
+@keyframes itemAnim5 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-0px, -190px);
+    }
+}
+
+@keyframes itemAnim6 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(120px, -180px);
+    }
+}
+
+@keyframes itemAnim7 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(190px, -140px);
+    }
+}
+
+
+#anim1 {
+    animation-name: itemAnim1;
+}
+
+#anim2{
+    animation-name: itemAnim2;
+}
+
+#anim3{
+    animation-name: itemAnim3;
+}
+
+#anim4{
+    animation-name: itemAnim4;
+}
+
+#anim5{
+    animation-name: itemAnim5;
+}
+
+#anim6{
+    animation-name: itemAnim6;
+}
+
+#anim7{
+    animation-name: itemAnim7;
+}
+
+
+.anim{
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+.polygon {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45%;
+    right: 28%;
+}
+
+.star {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45%;
+    right: 28%;
+}
+
 .heroImage {
-    width: 100%;
+    width: 80%;
+    z-index: 2;
 }
 
 .imageSection {
@@ -305,173 +434,236 @@ circle-progress::part(text) {
 
 @media only screen and (max-width: 1150px) {
 
-.heroHeader{
-font-size: 50px;
-}
+    .heroHeader {
+        font-size: 50px;
+    }
 
 }
 
 @media only screen and (max-width: 1150px) {
 
-.heroSection{
-    min-height: 0px;
+    .heroSection {
+        min-height: 0px;
+    }
+
+    .center {
+        flex-direction: column;
+        margin-top: 130px;
+    }
+
+    .heroSplitDiv {
+        width: 90%;
+        margin-bottom: 0px;
+    }
+
+    .heroImage {
+        width: auto;
+        height: 100%;
+    }
+
+    #apple {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+    }
+
+    .polygon {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 70%;
+        right: 55%;
+    }
+
+    .star {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 70%;
+        right: 55%;
+    }
+
+    .imageSection {
+        height: auto;
+    }
+
+    .mobileLessMarginTop {
+        margin-top: 50px;
+    }
+
+    .heroSplitDivBarcode {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .startButton {
+        margin-bottom: 50px;
+    }
 }
 
-.center{
-    flex-direction: column;
-    margin-top: 130px;
-}
+@media only screen and (max-width: 958px) {
 
-.heroSplitDiv{
-    width: 90%;
-    margin-bottom: 0px;
-}
+    .polygon {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 83%;
+        right: 55%;
+    }
 
-.heroImage{
-    width: auto;
-    height: 100%;
-}
+    .star {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 83%;
+        right: 55%;
+    }
 
-#apple{
-display: flex;
-justify-content: center;
-align-items: center;
-height: 500px;
-}
-
-.imageSection{
-    height: auto;
-}
-
-.mobileLessMarginTop{
-    margin-top: 50px;
-}
-
-.heroSplitDivBarcode{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.startButton{
-    margin-bottom: 50px;
-}
 }
 
 @media only screen and (max-width: 700px) {
-.navButton{
-    display: none;
+    .navButton {
+        display: none;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navLogo {
+        margin: 0px;
+    }
+
+    .navLogoText {
+        margin: 0px;
+    }
+
+    .heroSection {
+        text-align: center;
+    }
+
+    .heroHeader {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .heroCTA {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .heroHeader {
+        margin-top: 10px;
+    }
+
+    .heroImage {
+        width: 100%;
+        height: auto;
+    }
+
+    #apple {
+        height: auto;
+    }
+
+    .imageHeader {
+        font-size: 30px;
+    }
+
+    .fileInputText {
+        font-size: 15px;
+    }
+
+    .margin {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .summarySplitDiv {
+        width: 100%;
+    }
+
+    #itemName {
+        margin-bottom: 20px;
+    }
+
+    .listText {
+        font-size: 20px;
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .summarySplitDiv2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    circle-progress::part(base) {
+        width: 150px;
+        height: auto;
+    }
+
+    #AISummary {
+        font-size: 20px;
+    }
+
+    .listText2 {
+        font-size: 20px !important;
+    }
+
+    #mobile {
+        display: block !important;
+        font-size: 20px !important;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    .barcodeIMGHolder {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        align-self: center;
+        flex-basis: auto;
+        border: #3A1313 3px solid;
+        border-radius: 40px;
+        overflow: hidden;
+    }
+
+    .polygon {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 73%;
+        right: 58%;
+    }
+
+    .star {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 73%;
+        right: 58%;
+    }
+
 }
 
-.navBar{
-    display: flex;
-    flex-direction: column;
-}
+@media only screen and (max-width: 700px) {
+    .polygon {
+        display: none;
+    }
 
-.navLogo{
-    margin: 0px;
-}
-
-.navLogoText{
-    margin: 0px;
-}
-
-.heroSection{
-    text-align: center;
-}
-
-.heroHeader{
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.heroCTA{
-    font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.heroHeader{
-    margin-top: 10px;
-}
-
-.heroImage{
-    width: 100%;
-    height: auto;
-}
-
-#apple{
-    height: auto;
-}
-
-.imageHeader{
-    font-size: 30px;
-}
-
-.fileInputText{
-    font-size: 15px;
-}
-
-.margin{
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-}
-
-.summarySplitDiv{
-    width: 100%;
-}
-
-#itemName{
-    margin-bottom: 20px;
-}
-
-.listText{
-    font-size: 20px;
-    width: 100%;
-    margin-bottom: 80px;
-}
-
-.summarySplitDiv2{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-circle-progress::part(base) {
-    width: 150px;
-    height: auto;
-}
-
-#AISummary{
-    font-size: 20px;
-}
-
-.listText2{
-    font-size: 20px !important;
-}
-
-#mobile{
-    display: block !important; 
-    font-size: 20px !important;
-}
-
-#desktop{
-    display: none;
-}
-
-.barcodeIMGHolder {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    height: auto;
-    align-self: center;  
-    flex-basis: auto;
-    border: #3A1313 3px solid;
-    border-radius: 40px;
-    overflow: hidden;
-}
+    .star {
+        display: none;
+    }
 }

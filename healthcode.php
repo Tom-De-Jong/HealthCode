@@ -1,5 +1,7 @@
+<!-- NOTE: This is inside of a server. The website itself does not contain this file -->
+
 <?php
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: https://health.tomwebsites.nl");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
@@ -30,7 +32,14 @@ if (empty($ingred)) {
 
 $aiPrompt = "Product Name: " . $name . "\nIngredients: " . $ingred;
 
-$systemPrompt = "You are a dietitian. Respond ONLY in JSON. Ensure all healthiness percentages are rounded to the nearest whole number (integers only). Format: {\"ingredients\": [{\"name\": \"string\", \"healthiness_percentage\": number}, ...], \"average_healthiness_percentage\": number, \"summary\": \"string\"}";
+$systemPrompt = "You are a dietitian. Respond ONLY in JSON. Ensure all healthiness percentages are rounded to the nearest whole number (integers only). You can only respond in English. If ingredients are not english translate them to english. 
+
+For the \"summary\" string, you MUST strictly follow this internal structure:
+1. Start with \"Pros: [list pros] - Cons: [list cons]. \"
+2. Follow with a detailed nutritional analysis of approximately 100 words. If there are known healthier replacements for the product that you know the EXACT brand name of mention them.
+3. End the string exactly with \"<br><br><strong>Allergens: </strong>\" followed by a comma-separated list of allergens (or \"None detected\").
+
+Format: {\"ingredients\": [{\"name\": \"string\", \"healthiness_percentage\": number}], \"average_healthiness_percentage\": number, \"summary\": \"string\"}";
 
 $data = [
     "model" => "openai/gpt-oss-120b",
